@@ -12,7 +12,7 @@ for (const file of fs.readdirSync(path.join(__dirname, 'commands')).filter((name
   commands.push(...require(path.join(__dirname, 'commands', file)).commands.map((command) => command.data.toJSON()));
 }
 
-const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKEN);
+const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_TOKENMTU3MjcyNzQ5ODA1ODM3MTI0Mg.GNY7UT.XBT4yhLHjbTcql-eKnYxTAvd_bA5T-AamgVC3Q);
 const route = process.env.DISCORD_GUILD_ID
   ? Routes.applicationGuildCommands(process.env.DISCORD_CLIENT_ID, process.env.DISCORD_GUILD_ID)
   : Routes.applicationCommands(process.env.DISCORD_CLIENT_ID);
